@@ -18,7 +18,11 @@ function setup() {
 }
 
 function mousePressed() {
-  fullscreen(true);
+  try{
+    fullscreen(true);
+  }catch (e) {
+    console.log(e);
+  }
   resizeCanvas(displayWidth, displayHeight);
   spawn();
 }
